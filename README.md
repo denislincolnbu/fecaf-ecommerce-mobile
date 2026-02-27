@@ -1,50 +1,34 @@
-# Welcome to your Expo app 👋
+# FECAF ECOMERCE - Catálogo Mobile Interativo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este projeto consiste em um aplicativo mobile responsivo desenvolvido como entrega final para a disciplina de Mobile Development na UniFECAF. A aplicação funciona como um catálogo interativo de loja online, integrando navegação avançada, gerenciamento de estado global e consumo de API REST real.
 
-## Get started
+## Funcionalidades Obrigatórias Implementadas
+* Tela de Login: Simulação de autenticação com validação de campos e armazenamento temporário de dados do usuário.
+* Listagem de Produtos com Tabs: Organização por categorias (Masculino e Feminino) utilizando navegação por abas.
+* Consumo de API: Integração via Axios com a API DummyJSON para busca dinâmica de produtos.
+* Tela de Detalhes: Exibição detalhada de nome, descrição, preço, desconto e imagem do produto selecionado.
+* Logout Funcional: Botão para encerrar a sessão e limpar os dados armazenados.
 
-1. Install dependencies
+## Tecnologias Utilizadas
+* React Native com Expo.
+* Axios: Para requisições HTTP e consumo de API externa.
+* Redux Toolkit: Para gerenciamento de estado global e persistência de dados do usuário.
+* React Navigation: Implementação de fluxos de Stack e Tab Navigation.
 
-   ```bash
+## Estrutura de Pastas (Boas Práticas)
+O projeto segue uma arquitetura modular para garantir a separação entre lógica de negócio, estilização e renderização de componentes:
+/src
+  /assets        # Recursos estáticos e identidade visual (Logo FECAF Ecommerce)
+  /components    # Componentes reutilizáveis (ProductCard)
+  /screens       # Telas: Login, HomeScreen (Tabs) e ProductDetail
+  /services      # Configuração do Axios (api.js)
+  /store         # Slices e configuração do Redux Toolkit
+  /routes        # Definição do fluxo de navegação
+
+## Como Executar
+1. Certifique-se de possuir o Node.js instalado em sua máquina.
+2. Instale as dependências do projeto através do terminal:
    npm install
-   ```
-
-2. Start the app
-
-   ```bash
+3. Inicie o servidor do Expo:
    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4. Utilize o aplicativo Expo Go em seu dispositivo móvel para escanear o QR Code gerado.
