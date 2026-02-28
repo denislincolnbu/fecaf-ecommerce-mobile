@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Configuração base do Axios para o projeto FECAF
+// Configuração central do Axios para a API DummyJSON
 const api = axios.create({
   baseURL: 'https://dummyjson.com',
   timeout: 10000,
