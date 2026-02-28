@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
-import Routes from './src/routes';
-import store from './src/store';
+import Routes from './SRC/routes';
+import store from './SRC/store';
 
 export default function App() {
   return (
