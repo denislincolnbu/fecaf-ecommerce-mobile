@@ -1,4 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
+
+// Confira se os nomes dos arquivos em src/screens são exatamente estes:
 import HomeScreen from '../screens/HomeScreen';
 import Login from '../screens/Login';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
