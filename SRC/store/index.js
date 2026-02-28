@@ -1,10 +1,16 @@
-import { configureStore } from '@reduxjs/toolkit';
-import userReducer from './userSlice'; // Importando o seu arquivo userSlice.js
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from '../screens/HomeScreen';
+import Login from '../screens/Login';
+import ProductDetailScreen from '../screens/ProductDetailScreen';
 
-const store = configureStore({
-  reducer: {
-    user: userReducer, // Aqui o estado global será acessado como 'state.user'
-  },
-});
+const Stack = createStackNavigator();
 
-export default store;
+export default function Routes() {
+  return (
+    <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+    </Stack.Navigator>
+  );
+}
