@@ -9,7 +9,7 @@ export default function Routes() {
   return (
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Catálogo FECAF' }} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Produtos' }} />
       <Stack.Screen name="ProductDetail" component={ProductDetailScreen} options={{ title: 'Detalhes' }} />
     </Stack.Navigator>
   );
