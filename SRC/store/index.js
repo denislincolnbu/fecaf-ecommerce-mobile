@@ -1,10 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-// Verifique se o caminho do seu slice/reducer está correto e em maiúsculo
-import authReducer from '../store/authSlice';
+import userReducer from './userSlice'; // Importando o seu arquivo userSlice.js
 
 const store = configureStore({
   reducer: {
-    auth: authReducer,
+    user: userReducer, // Aqui o estado global será acessado como 'state.user'
   },
 });
 
